@@ -23,6 +23,9 @@
                 <p>
                     <button class="btn btn-info" data-toggle="modal" data-target="#ventanaAgregarBeneficio">Agregar nuevo beneficio</button>
                 </p>
+                <p>
+                    Cambio de prueba
+                </p>
             </div>
         </div>
 
