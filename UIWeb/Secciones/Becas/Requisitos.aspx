@@ -22,6 +22,9 @@
                 <p>
                     <button class="btn btn-info" data-toggle="modal" data-target="#ventanaAgregarRequisito">Agregar nuevo requisito</button>
                 </p>
+                <p>
+                    Cambio de prueba
+                </p>
             </div>
         </div>
 
