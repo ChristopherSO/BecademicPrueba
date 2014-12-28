@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7419AC4-D5A7-4DB2-B082-839AAE1AEC25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EntitiesLayer</RootNamespace>
+    <AssemblyName>EntitiesLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modulo Academico\Calificacion.cs" />
+    <Compile Include="Modulo Academico\Carrera.cs" />
+    <Compile Include="Modulo Academico\Curso.cs" />
+    <Compile Include="Modulo Academico\Repositories\CalificacionRepository.cs" />
+    <Compile Include="Modulo Academico\Repositories\CarreraRepository.cs" />
+    <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Modulo Academico\Repositories\CursosRepository.cs" />
+    <Compile Include="Modulo de becas\Aprobacion.cs" />
+    <Compile Include="Modulo de becas\Beca.cs" />
+    <Compile Include="Modulo de becas\Repositories\AprobacionesRepository.cs" />
+    <Compile Include="Modulo de becas\Repositories\BecaRepository.cs" />
+    <Compile Include="Modulo de becas\Beneficio.cs" />
+    <Compile Include="Modulo de becas\Estudio.cs" />
+    <Compile Include="Modulo de becas\Repositories\BeneficioRepository.cs" />
+    <Compile Include="Modulo de becas\Repositories\EstudioRepository.cs" />
+    <Compile Include="Modulo de becas\Repositories\SolicitudRepository.cs" />
+    <Compile Include="Modulo de becas\Repositories\RequisitoRepository.cs" />
+    <Compile Include="Modulo de becas\Solicitud.cs" />
+    <Compile Include="Modulo de becas\TipoBeneficio.cs" />
+    <Compile Include="Modulo de becas\TipoRequisito.cs" />
+    <Compile Include="Modulo notificaciones\Notificacion.cs" />
+    <Compile Include="Modulo notificaciones\Repositories\NotificacionRepository.cs" />
+    <Compile Include="Modulo notificaciones\TipoNotificacion.cs" />
+    <Compile Include="Modulo seguridad\PermisoRol.cs" />
+    <Compile Include="Modulo seguridad\Repositories\PermisoRepositorio.cs" />
+    <Compile Include="Modulo seguridad\Repositories\RolUsuarioRepository.cs" />
+    <Compile Include="Modulo seguridad\Usuario.cs" />
+    <Compile Include="Modulo seguridad\Repositories\UsuarioRepository.cs" />
+    <Compile Include="Modulo seguridad\RolUsuario.cs" />
+    <Compile Include="ObjectUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Modulo de becas\Repositories\TipoBecaRepository.cs" />
+    <Compile Include="Modulo de becas\Requisito.cs" />
+    <Compile Include="Modulo de becas\TipoBeca.cs" />
+    <Compile Include="RuleViolation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{dabf4dd1-0f26-4168-b350-c00ea16f73dd}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIL\TIL.csproj">
+      <Project>{ad30ebd0-2782-4d53-ac4e-97dc815799ce}</Project>
+      <Name>TIL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

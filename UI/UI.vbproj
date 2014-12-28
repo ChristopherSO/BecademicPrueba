@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7F3E962-8926-44E0-8FFA-BD81FEDEBB08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>UI.My.MyApplication</StartupObject>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>Becademic</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Mark\Desktop\Instalador3\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-CR</TargetCulture>
+    <ProductName>Becademic</ProductName>
+    <PublisherName>H2Code</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Becademic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Becademic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>486D3B1562A08AEF267A5661178F22E38DB35EBF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>UI_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EASendMail">
+      <HintPath>..\..\..\..\..\Program Files (x86)\EASendMail\EASendMail.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BecademicMain.designer.vb">
+      <DependentUpon>BecademicMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BecademicMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="beca_becademicDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>beca_becademicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="beca_becademicDataSet.vb">
+      <DependentUpon>beca_becademicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Encrypt.vb" />
+    <Compile Include="GestorValidaciones.vb" />
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modGlobal.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCurso.Designer.vb">
+      <DependentUpon>frmAgregarCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCurso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\uCProforma.Designer.vb">
+      <DependentUpon>uCProforma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\uCProforma.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\Mejores promedios\uCMejoresPromediosTodasCarreras.Designer.vb">
+      <DependentUpon>uCMejoresPromediosTodasCarreras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\Mejores promedios\uCMejoresPromediosTodasCarreras.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\uCHistorialAcademico.Designer.vb">
+      <DependentUpon>uCHistorialAcademico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\uCHistorialAcademico.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\Mejores promedios\uCMejoresPromediosXCarrera.Designer.vb">
+      <DependentUpon>uCMejoresPromediosXCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\Mejores promedios\uCMejoresPromediosXCarrera.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\Promedio generales\uCPromedioGeneralesCursos.Designer.vb">
+      <DependentUpon>uCPromedioGeneralesCursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\Promedio generales\uCPromedioGeneralesCursos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\Promedio generales\uCPromedioGeneralesCarreras.Designer.vb">
+      <DependentUpon>uCPromedioGeneralesCarreras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de reportes\Promedio generales\uCPromedioGeneralesCarreras.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\uCInicio.Designer.vb">
+      <DependentUpon>uCInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\uCInicio.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAdministrarCursosCarrera.Designer.vb">
+      <DependentUpon>frmAdministrarCursosCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAdministrarCursosCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAdministrarDirectoresCarrera.Designer.vb">
+      <DependentUpon>frmAdministrarDirectoresCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAdministrarDirectoresCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCarrera.designer.vb">
+      <DependentUpon>frmAgregarCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarDirectorCarrera.Designer.vb">
+      <DependentUpon>frmAgregarDirectorCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarDirectorCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarBeneficio.Designer.vb">
+      <DependentUpon>frmAgregarBeneficio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarBeneficio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarRequisito.Designer.vb">
+      <DependentUpon>frmAgregarRequisito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarRequisito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarTipoBeca.Designer.vb">
+      <DependentUpon>frmAgregarTipoBeca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarTipoBeca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCalificacion.Designer.vb">
+      <DependentUpon>frmAgregarCalificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCalificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmActualizarCarrera.Designer.vb">
+      <DependentUpon>frmActualizarCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmActualizarCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\uCCalificaciones.Designer.vb">
+      <DependentUpon>uCCalificaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\uCCalificaciones.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmActualizarCurso.Designer.vb">
+      <DependentUpon>frmActualizarCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\popups\frmActualizarCurso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarRequisito.Designer.vb">
+      <DependentUpon>frmActualizarRequisito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarRequisito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarBeneficios.Designer.vb">
+      <DependentUpon>frmActualizarBeneficios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarBeneficios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarTipoDeBeca.Designer.vb">
+      <DependentUpon>frmActualizarTipoDeBeca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarTipoDeBeca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmCarrerasAsignadas.Designer.vb">
+      <DependentUpon>frmCarrerasAsignadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmCarrerasAsignadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmRequisitosAsignados.Designer.vb">
+      <DependentUpon>frmRequisitosAsignados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmRequisitosAsignados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmBeneficiosAsignados.Designer.vb">
+      <DependentUpon>frmBeneficiosAsignados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\popups\frmBeneficiosAsignados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de configuraciones\uCConfiguraciones.Designer.vb">
+      <DependentUpon>uCConfiguraciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de configuraciones\uCConfiguraciones.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\uCCursos.Designer.vb">
+      <DependentUpon>uCCursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\uCCursos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\uCCarreras.Designer.vb">
+      <DependentUpon>uCCarreras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo academico\uCCarreras.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\uCRequisitos.Designer.vb">
+      <DependentUpon>uCRequisitos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\uCRequisitos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\uCBeneficios.Designer.vb">
+      <DependentUpon>uCBeneficios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\uCBeneficios.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\uCTiposDeBecas.Designer.vb">
+      <DependentUpon>uCTiposDeBecas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de becas\uCTiposDeBecas.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmActualizarRol.Designer.vb">
+      <DependentUpon>frmActualizarRol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmActualizarRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmActualizarUsuario.Designer.vb">
+      <DependentUpon>frmActualizarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmActualizarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmAgregarRol.Designer.vb">
+      <DependentUpon>frmAgregarRol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmAgregarRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmAgregarUsuario .Designer.vb">
+      <DependentUpon>frmAgregarUsuario .vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmAgregarUsuario .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmPermisosAsignados.Designer.vb">
+      <DependentUpon>frmPermisosAsignados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmPermisosAsignados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmRolesUsuario.Designer.vb">
+      <DependentUpon>frmRolesUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmRolesUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\uCRoles.Designer.vb">
+      <DependentUpon>uCRoles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\uCRoles.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\uCUsuarios.Designer.vb">
+      <DependentUpon>uCUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de la aplicacion\Modulo de seguridad\uCUsuarios.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas del login\uCRecuperarContrasena.Designer.vb">
+      <DependentUpon>uCRecuperarContrasena.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas del login\uCRecuperarContrasena.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas del login\uCLogin.Designer.vb">
+      <DependentUpon>uCLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas del login\uCLogin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BecademicMain.resx">
+      <DependentUpon>BecademicMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCurso.resx">
+      <DependentUpon>frmAgregarCurso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\Mejores promedios\ReporteMejoresCarreras.rdlc" />
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\Mejores promedios\ReporteMejoresPromediosXCarrera.rdlc" />
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\Promedio generales\ReportePromedioGeneralCarreras.rdlc" />
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\Promedio generales\ReportePromedioGeneralCursos.rdlc" />
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\ReporteHistorialAcademico.rdlc" />
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\ReporteProforma.rdlc" />
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\uCProforma.resx">
+      <DependentUpon>uCProforma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\Mejores promedios\uCMejoresPromediosTodasCarreras.resx">
+      <DependentUpon>uCMejoresPromediosTodasCarreras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\uCHistorialAcademico.resx">
+      <DependentUpon>uCHistorialAcademico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\Mejores promedios\uCMejoresPromediosXCarrera.resx">
+      <DependentUpon>uCMejoresPromediosXCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\Promedio generales\uCPromedioGeneralesCursos.resx">
+      <DependentUpon>uCPromedioGeneralesCursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de reportes\Promedio generales\uCPromedioGeneralesCarreras.resx">
+      <DependentUpon>uCPromedioGeneralesCarreras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\uCInicio.resx">
+      <DependentUpon>uCInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\popups\frmAdministrarCursosCarrera.resx">
+      <DependentUpon>frmAdministrarCursosCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\popups\frmAdministrarDirectoresCarrera.resx">
+      <DependentUpon>frmAdministrarDirectoresCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCarrera.resx">
+      <DependentUpon>frmAgregarCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarDirectorCarrera.resx">
+      <DependentUpon>frmAgregarDirectorCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarBeneficio.resx">
+      <DependentUpon>frmAgregarBeneficio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarRequisito.resx">
+      <DependentUpon>frmAgregarRequisito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmAgregarTipoBeca.resx">
+      <DependentUpon>frmAgregarTipoBeca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\popups\frmAgregarCalificacion.resx">
+      <DependentUpon>frmAgregarCalificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\popups\frmActualizarCarrera.resx">
+      <DependentUpon>frmActualizarCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\uCCalificaciones.resx">
+      <DependentUpon>uCCalificaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\popups\frmActualizarCurso.resx">
+      <DependentUpon>frmActualizarCurso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarRequisito.resx">
+      <DependentUpon>frmActualizarRequisito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarBeneficios.resx">
+      <DependentUpon>frmActualizarBeneficios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmActualizarTipoDeBeca.resx">
+      <DependentUpon>frmActualizarTipoDeBeca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmCarrerasAsignadas.resx">
+      <DependentUpon>frmCarrerasAsignadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmRequisitosAsignados.resx">
+      <DependentUpon>frmRequisitosAsignados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\popups\frmBeneficiosAsignados.resx">
+      <DependentUpon>frmBeneficiosAsignados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de configuraciones\uCConfiguraciones.resx">
+      <DependentUpon>uCConfiguraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\uCCursos.resx">
+      <DependentUpon>uCCursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo academico\uCCarreras.resx">
+      <DependentUpon>uCCarreras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\uCRequisitos.resx">
+      <DependentUpon>uCRequisitos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\uCBeneficios.resx">
+      <DependentUpon>uCBeneficios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de becas\uCTiposDeBecas.resx">
+      <DependentUpon>uCTiposDeBecas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmActualizarRol.resx">
+      <DependentUpon>frmActualizarRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmActualizarUsuario.resx">
+      <DependentUpon>frmActualizarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmAgregarRol.resx">
+      <DependentUpon>frmAgregarRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmAgregarUsuario .resx">
+      <DependentUpon>frmAgregarUsuario .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmPermisosAsignados.resx">
+      <DependentUpon>frmPermisosAsignados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de seguridad\popups\frmRolesUsuario.resx">
+      <DependentUpon>frmRolesUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de seguridad\uCRoles.resx">
+      <DependentUpon>uCRoles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de la aplicacion\Modulo de seguridad\uCUsuarios.resx">
+      <DependentUpon>uCUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas del login\uCRecuperarContrasena.resx">
+      <DependentUpon>uCRecuperarContrasena.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas del login\uCLogin.resx">
+      <DependentUpon>uCLogin.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="beca_becademicDataSet.xsc">
+      <DependentUpon>beca_becademicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="beca_becademicDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>beca_becademicDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="beca_becademicDataSet.xss">
+      <DependentUpon>beca_becademicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{b5f1664a-64db-495d-94a4-d5760ce05362}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntitiesLayer\EntitiesLayer.csproj">
+      <Project>{e7419ac4-d5a7-4db2-b082-839aae1aec25}</Project>
+      <Name>EntitiesLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\fondo_login.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
